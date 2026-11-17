@@ -176,12 +176,12 @@ onBeforeUnmount(() => {
         transition: .25s;
 
         &:focus-visible:not(.az-pagination__button--current) {
-            @include focus-ring($color-grey-400, 22px);
+            @include focus-ring($color-grey-300, 22px);
         }
 
         &:hover:not(:disabled):not([aria-disabled='true']):not(.az-pagination__button--current) {
             background: $color-milk-200;
-            color: $color-milk-400;
+            color: $color-sand-300;
         }
 
         &:disabled,
@@ -189,7 +189,7 @@ onBeforeUnmount(() => {
             background: transparent;
             border: none;
             cursor: not-allowed;
-            color: $color-milk-400;
+            color: $color-sand-300;
         }
 
         &--current {
@@ -208,7 +208,7 @@ onBeforeUnmount(() => {
         background: transparent;
         border: none;
         font-size: 15px;
-        color: $color-milk-400;
+        color: $color-sand-300;
 
         @media (max-width: 480px) {
             margin: 0 -4px;

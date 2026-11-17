@@ -65,7 +65,10 @@ import {
     watch
 } from 'vue'
 
-import type { SelectOption } from '@/types/movieTvShowFinder'
+type SelectOption = {
+    label: string
+    value: string
+}
 
 const props = withDefaults(defineProps<{
     ariaLabel?: string
@@ -362,7 +365,7 @@ onBeforeUnmount(() => {
             bottom: -8px;
             left: -16px;
             right: 4px;
-            box-shadow: 0 0 0 4px $color-grey-400;
+            box-shadow: 0 0 0 4px $color-grey-300;
             border-radius: 34px 0 0 34px;
             pointer-events: none;
 
@@ -406,8 +409,8 @@ onBeforeUnmount(() => {
         top: -4px;
         left: -4px;
         padding: 70px 0 0;
-        background: #B6B6AF;
-        box-shadow: 0 0 48px -24px $color-grey-300;
+        background: $color-milk-500;
+        box-shadow: 0 0 48px -24px $color-grey-200;
         border-radius: 38px 0 38px 38px;
         border: 4px solid $color-milk-200;
 
@@ -431,7 +434,7 @@ onBeforeUnmount(() => {
         justify-content: center;
         align-items: center;
         border-radius: 0 0 34px 34px;
-        border-top: .5px solid #CFCFC9;
+        border-top: .5px solid $color-milk-300;
     }
 
     &__option {
@@ -448,11 +451,11 @@ onBeforeUnmount(() => {
         }
 
         &:hover {
-            background: $color-milk-300;
+            background: $color-milk-600;
         }
 
         &:focus-visible {
-            background: $color-grey-400;
+            background: $color-grey-300;
         }
     }
 }

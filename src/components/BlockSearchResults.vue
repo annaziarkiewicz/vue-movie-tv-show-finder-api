@@ -92,7 +92,7 @@ const resultsStatus = computed(() => {
     &__button {
         margin-block: 12px auto;
         padding: 16px 24px;
-        background: $color-rose-200;
+        background: $color-rose-100;
         border-radius: 8px;
         font-size: 15px;
         font-weight: 500;
@@ -101,11 +101,11 @@ const resultsStatus = computed(() => {
         transition: .25s;
 
         &:focus-visible {
-            @include focus-ring($color-grey-400, 8px);
+            @include focus-ring($color-grey-300, 8px);
         }
 
         &:hover {
-            background: $color-rose-300;
+            background: $color-rose-200;
         }
     }
 }

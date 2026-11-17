@@ -116,7 +116,7 @@ import {
 export type Suggestion = {
     description?: string
     id: number | string
-    image?: string
+    image?: string | null
     label: string
 }
 
@@ -222,12 +222,24 @@ const focusOption = (index: number) => {
     optionElements.value[nextIndex]?.focus()
 }
 
+const focusSearchInput = () => {
+    const searchInput = suggestionsContainerRef.value
+        ?.closest('form')
+        ?.querySelector<HTMLInputElement>('input[name="search"]')
+
+    nextTick(() => {
+        searchInput?.focus()
+    })
+}
+
 const closeSuggestions = () => {
     emit('close')
+    focusSearchInput()
 }
 
 const selectSuggestion = (suggestion: Suggestion) => {
     emit('select', suggestion)
+    focusSearchInput()
 }
 
 const onImageError = (id: number | string) => {
@@ -386,7 +398,7 @@ onBeforeUnmount(() => {
     &__list {
         overflow-y: auto;
         max-height: 385px;
-        border-top: 1px solid $color-grey-200;
+        border-top: 1px solid $color-milk-400;
         scrollbar-width: none;
 
         &::-webkit-scrollbar {
@@ -403,11 +415,11 @@ onBeforeUnmount(() => {
         text-align: left;
 
         &:hover {
-            background: $color-milk-300;
+            background: $color-milk-600;
         }
 
         &:focus-visible {
-            background: $color-grey-400;
+            background: $color-grey-300;
         }
 
         &--landscape {
@@ -426,10 +438,10 @@ onBeforeUnmount(() => {
         flex-shrink: 0;
         justify-content: center;
         align-items: center;
-        background: #CFCFC9;
+        background: $color-milk-300;
         object-fit: cover;
         font-size: 9px;
-        color: $color-milk-300;
+        color: $color-milk-600;
 
         &--landscape {
             height: 32px;
@@ -470,7 +482,7 @@ onBeforeUnmount(() => {
         overflow: hidden;
         font-size: 12px;
         line-height: 1em;
-        color: $color-milk-500;
+        color: $color-sand-400;
         text-transform: uppercase;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -489,8 +501,8 @@ onBeforeUnmount(() => {
         bottom: 24px;
         right: 0;
         width: 12px;
-        background: $color-grey-200;
-        border-right: 4px solid #B6B6AF;
+        background: $color-milk-400;
+        border-right: 4px solid $color-milk-500;
 
         &-thumb {
             width: 8px;

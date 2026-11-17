@@ -76,19 +76,19 @@ watch(() => props.avatar, (avatar) => {
     cursor: pointer;
 
     &:focus-visible {
-        background: $color-grey-400;
+        background: $color-grey-300;
         outline: none;
     }
 
     &:hover {
         .az-cast-member__name {
-            color: $color-grey-400;
+            color: $color-grey-300;
         }
     }
 
     &:focus-visible:hover {
         .az-cast-member__name {
-            color: $color-milk-500;
+            color: $color-sand-400;
         }
     }
 
@@ -99,11 +99,11 @@ watch(() => props.avatar, (avatar) => {
         flex-shrink: 0;
         justify-content: center;
         align-items: center;
-        background: #CFCFC9;
+        background: $color-milk-300;
         border-radius: 50%;
         object-fit: cover;
         font-size: 9px;
-        color: $color-milk-300;
+        color: $color-milk-600;
     }
 
     &__content {
@@ -123,7 +123,7 @@ watch(() => props.avatar, (avatar) => {
     &__character {
         font-size: 12px;
         line-height: 1em;
-        color: $color-milk-500;
+        color: $color-sand-400;
         text-transform: uppercase;
     }
 }

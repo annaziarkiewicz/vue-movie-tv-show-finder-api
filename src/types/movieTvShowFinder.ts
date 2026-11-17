@@ -162,11 +162,6 @@ export interface MovieTvShowUrlState {
 
 export type CoverColor = 'mint' | 'navy' | 'rose'
 
-export interface SelectOption {
-    label: string
-    value: string
-}
-
 export interface WelcomeItem {
     id: number
     image: string

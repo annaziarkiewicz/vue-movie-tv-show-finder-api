@@ -240,7 +240,7 @@ onUnmounted(() => {
     }
 
     &:focus-visible {
-        @include focus-ring($color-grey-400, 4px);
+        @include focus-ring($color-grey-300, 4px);
     }
 
     &::-webkit-scrollbar {
@@ -248,7 +248,7 @@ onUnmounted(() => {
     }
 
     &::-webkit-scrollbar-track {
-        background: $color-grey-200;
+        background: $color-milk-400;
         border-radius: 4px;
     }
 
@@ -267,7 +267,7 @@ onUnmounted(() => {
 
     &__retry {
         padding: 16px 24px;
-        background: $color-rose-200;
+        background: $color-rose-100;
         border-radius: 8px;
         font-size: 15px;
         font-weight: 500;
@@ -276,11 +276,11 @@ onUnmounted(() => {
         transition: .25s;
 
         &:focus-visible {
-            @include focus-ring($color-grey-400, 8px);
+            @include focus-ring($color-grey-300, 8px);
         }
 
         &:hover {
-            background: $color-rose-300;
+            background: $color-rose-200;
         }
     }
 
@@ -293,7 +293,7 @@ onUnmounted(() => {
         &-label {
             font-size: 12px;
             line-height: 1em;
-            color: $color-milk-500;
+            color: $color-sand-400;
             text-transform: uppercase;
         }
 
@@ -319,7 +319,7 @@ onUnmounted(() => {
         &-label {
             font-size: 12px;
             line-height: 1em;
-            color: $color-milk-500;
+            color: $color-sand-400;
             text-transform: uppercase;
         }
     }
@@ -347,7 +347,7 @@ onUnmounted(() => {
         &-label {
             font-size: 12px;
             line-height: 1em;
-            color: $color-milk-500;
+            color: $color-sand-400;
             text-transform: uppercase;
         }
 

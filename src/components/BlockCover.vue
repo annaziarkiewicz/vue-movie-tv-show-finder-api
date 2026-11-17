@@ -107,7 +107,7 @@ watch(() => props.cover, (cover) => {
         width: 100%;
         height: 100%;
         padding: 1px 1px 1px 0;
-        background: $color-grey-400;
+        background: $color-grey-300;
         border-radius: 2px 4px 4px 2px;
 
         &:after {
@@ -129,7 +129,7 @@ watch(() => props.cover, (cover) => {
         width: 100%;
         height: 100%;
         padding: 1px 1px 1px 0;
-        background: $color-grey-400;
+        background: $color-grey-300;
         border-radius: 0 3px 3px 0;
 
         &:before {
@@ -190,7 +190,7 @@ watch(() => props.cover, (cover) => {
         }
 
         &--loading {
-            background: #CFCFC9;
+            background: $color-milk-300;
         }
 
         &--mint {
@@ -199,13 +199,13 @@ watch(() => props.cover, (cover) => {
         }
 
         &--navy {
-            background: $color-navy-200;
-            color: $color-navy-400;
+            background: $color-navy-100;
+            color: $color-navy-300;
         }
 
         &--rose {
-            background: $color-rose-200;
-            color: $color-rose-400;
+            background: $color-rose-100;
+            color: $color-rose-300;
         }
 
         &-image {

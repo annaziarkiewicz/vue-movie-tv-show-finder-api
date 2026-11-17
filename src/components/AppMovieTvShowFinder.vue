@@ -593,7 +593,7 @@ onBeforeUnmount(() => {
     flex-direction: column;
     justify-content: stretch;
     gap: 36px;
-    background: #B6B6AF;
+    background: $color-milk-500;
 
     @media (max-width: 767px) {
         padding-inline: 24px;
@@ -644,7 +644,7 @@ onBeforeUnmount(() => {
         font-size: 15px;
         font-weight: 500;
         line-height: 1.25em;
-        color: $color-milk-400;
+        color: $color-sand-300;
         text-transform: uppercase;
         transition: .25s;
 
@@ -653,7 +653,7 @@ onBeforeUnmount(() => {
         }
 
         &:focus-visible {
-            @include focus-ring($color-grey-400, 22px);
+            @include focus-ring($color-grey-300, 22px);
         }
 
         &:hover {
@@ -664,7 +664,7 @@ onBeforeUnmount(() => {
     &__count {
         font-size: 15px;
         line-height: 1.25em;
-        color: $color-milk-500;
+        color: $color-sand-400;
     }
 }
 
